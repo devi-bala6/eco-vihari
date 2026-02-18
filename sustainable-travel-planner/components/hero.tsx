@@ -13,34 +13,34 @@ export function Hero() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-foreground/60" />
+        <div className="absolute inset-0 bg-foreground/50" />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 py-32 md:py-40">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 py-32 md:py-40 w-full">
         <div className="max-w-3xl">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-4 py-2 backdrop-blur-sm">
+          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/10 px-5 py-2.5 backdrop-blur-sm">
             <Leaf className="h-4 w-4 text-accent" />
-            <span className="text-sm font-medium text-primary-foreground">
+            <span className="text-sm font-medium text-primary-foreground tracking-wide">
               Sustainable Travel for a Greener India
             </span>
           </div>
 
-          <h1 className="font-serif text-4xl font-bold leading-tight tracking-tight text-primary-foreground sm:text-5xl md:text-7xl text-balance">
+          <h1 className="font-serif text-5xl font-bold leading-[1.1] tracking-tight text-primary-foreground sm:text-6xl md:text-8xl text-balance">
             Travel India.
             <br />
             <span className="text-accent">Tread Lightly.</span>
           </h1>
 
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-primary-foreground/80 text-pretty">
+          <p className="mt-8 max-w-xl text-lg leading-relaxed text-primary-foreground/80 text-pretty">
             Discover budget-friendly, eco-conscious journeys across India. 
             Track your carbon footprint, find greener alternatives, and earn 
             rewards for every sustainable choice you make.
           </p>
 
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
             <Button
               size="lg"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 text-base px-8"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 text-base px-8 rounded-full h-12"
               asChild
             >
               <a href="#calculator">
@@ -51,25 +51,25 @@ export function Hero() {
             <Button
               size="lg"
               variant="outline"
-              className="border-primary-foreground/30 text-primary-foreground bg-primary-foreground/10 hover:bg-primary-foreground/20 backdrop-blur-sm text-base"
+              className="border-primary-foreground/30 text-primary-foreground bg-primary-foreground/10 hover:bg-primary-foreground/20 hover:text-primary-foreground backdrop-blur-sm text-base rounded-full h-12"
               asChild
             >
               <a href="#planner">Plan Your Trip</a>
             </Button>
           </div>
 
-          <div className="mt-12 grid grid-cols-3 gap-6 max-w-md">
-            <div className="text-center">
-              <p className="font-serif text-2xl font-bold text-primary-foreground md:text-3xl">12K+</p>
-              <p className="mt-1 text-xs text-primary-foreground/60">Green Trips Planned</p>
+          <div className="mt-16 flex gap-12 max-w-md">
+            <div>
+              <p className="font-serif text-3xl font-bold text-primary-foreground md:text-4xl">12K+</p>
+              <p className="mt-1 text-sm text-primary-foreground/50">Green Trips Planned</p>
             </div>
-            <div className="text-center">
-              <p className="font-serif text-2xl font-bold text-primary-foreground md:text-3xl">45T</p>
-              <p className="mt-1 text-xs text-primary-foreground/60">{'CO\u2082 Saved'}</p>
+            <div>
+              <p className="font-serif text-3xl font-bold text-primary-foreground md:text-4xl">45T</p>
+              <p className="mt-1 text-sm text-primary-foreground/50">{'CO\u2082 Saved'}</p>
             </div>
-            <div className="text-center">
-              <p className="font-serif text-2xl font-bold text-primary-foreground md:text-3xl">8K+</p>
-              <p className="mt-1 text-xs text-primary-foreground/60">Eco Travelers</p>
+            <div>
+              <p className="font-serif text-3xl font-bold text-primary-foreground md:text-4xl">8K+</p>
+              <p className="mt-1 text-sm text-primary-foreground/50">Eco Travelers</p>
             </div>
           </div>
         </div>
