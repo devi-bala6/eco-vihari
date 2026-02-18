@@ -7,7 +7,7 @@ const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
 
 export const metadata: Metadata = {
-  title: 'Eco Vihri - Sustainable & Budget-Friendly Travel in India',
+  title: 'Eco Vihari - Sustainable & Budget-Friendly Travel in India',
   description: 'Plan eco-conscious trips across India. Track your CO2 emissions, discover green alternatives, earn NFT rewards, and collaborate with fellow sustainable travelers.',
   keywords: ['sustainable travel', 'eco tourism India', 'green travel', 'carbon footprint', 'budget travel India'],
 }

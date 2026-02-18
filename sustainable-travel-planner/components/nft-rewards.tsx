@@ -37,7 +37,7 @@ const nftBadges = [
   },
   {
     name: "Planet Guardian",
-    description: "Save 1 tonne of CO2 and plant 10 trees via Eco Vihri",
+    description: "Save 1 tonne of CO2 and plant 10 trees via Eco Vihari",
     icon: Trophy,
     level: "Platinum",
     requirement: "1T CO2 + 10 trees",
@@ -52,19 +52,19 @@ const rewards = [
   "Exclusive access to eco-travel events",
   "Priority booking for green experiences",
   "NFT collectibles with real-world perks",
-  "Feature on the Eco Vihri leaderboard",
+  "Feature on the Eco Vihari leaderboard",
 ]
 
 export function NFTRewards() {
   return (
-    <section id="rewards" className="py-24 px-6 bg-background">
+    <section id="rewards" className="py-28 px-6 bg-background">
       <div className="mx-auto max-w-7xl">
-        <div className="text-center mb-16">
-          <Badge variant="secondary" className="mb-4">Rewards</Badge>
-          <h2 className="font-serif text-3xl font-bold text-foreground sm:text-4xl md:text-5xl text-balance">
+        <div className="text-center mb-20">
+          <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-4">Rewards</p>
+          <h2 className="font-serif text-4xl font-bold text-foreground sm:text-5xl md:text-6xl text-balance">
             Earn NFT Rewards for Going Green
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-muted-foreground leading-relaxed text-pretty">
+          <p className="mt-6 max-w-2xl mx-auto text-muted-foreground leading-relaxed text-pretty text-lg">
             Every sustainable choice earns you unique NFT badges with real-world perks.
             Collect, trade, and unlock exclusive benefits as you travel greener.
           </p>
@@ -82,39 +82,39 @@ export function NFTRewards() {
                       badge.earned ? "ring-1 ring-primary/20" : ""
                     }`}
                   >
-                    <CardContent className="p-5">
-                      <div className="flex items-start justify-between mb-4">
-                        <div className={`flex h-12 w-12 items-center justify-center rounded-xl ${
+                    <CardContent className="p-6">
+                      <div className="flex items-start justify-between mb-5">
+                        <div className={`flex h-12 w-12 items-center justify-center rounded-full ${
                           badge.earned ? "bg-primary text-primary-foreground" : "bg-secondary text-muted-foreground"
                         }`}>
-                          <Icon className="h-6 w-6" />
+                          <Icon className="h-5 w-5" />
                         </div>
                         <div className="flex items-center gap-1.5">
                           {badge.earned ? (
-                            <Badge className="bg-primary/10 text-primary border-0 text-xs">
+                            <Badge className="bg-primary/10 text-primary border-0 text-xs rounded-full">
                               <Check className="mr-1 h-3 w-3" /> Earned
                             </Badge>
                           ) : (
-                            <Badge variant="secondary" className="text-xs">
+                            <Badge variant="secondary" className="text-xs rounded-full">
                               <Lock className="mr-1 h-3 w-3" /> Locked
                             </Badge>
                           )}
                         </div>
                       </div>
 
-                      <h3 className="font-semibold text-card-foreground">{badge.name}</h3>
-                      <p className="mt-1 text-sm text-muted-foreground leading-relaxed">{badge.description}</p>
+                      <h3 className="font-semibold text-card-foreground text-lg">{badge.name}</h3>
+                      <p className="mt-1.5 text-sm text-muted-foreground leading-relaxed">{badge.description}</p>
 
-                      <div className="mt-4">
-                        <div className="flex items-center justify-between text-xs mb-1.5">
+                      <div className="mt-5">
+                        <div className="flex items-center justify-between text-xs mb-2">
                           <span className="text-muted-foreground">{badge.requirement}</span>
-                          <span className="font-medium text-foreground">{badge.progress}%</span>
+                          <span className="font-semibold text-foreground">{badge.progress}%</span>
                         </div>
                         <Progress value={badge.progress} className="h-2" />
                       </div>
 
-                      <div className="mt-3">
-                        <Badge variant="outline" className="text-xs">
+                      <div className="mt-4">
+                        <Badge variant="outline" className="text-xs rounded-full">
                           {badge.level}
                         </Badge>
                       </div>
@@ -127,27 +127,27 @@ export function NFTRewards() {
 
           <div className="lg:col-span-2 flex flex-col gap-6">
             <Card className="border-border bg-card overflow-hidden">
-              <div className="relative h-48">
+              <div className="relative h-52">
                 <Image
                   src="/images/nft-badge.jpg"
-                  alt="Eco Vihri NFT badge collectible"
+                  alt="Eco Vihari NFT badge collectible"
                   fill
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-foreground/30" />
+                <div className="absolute inset-0 bg-foreground/40" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
-                    <Award className="h-10 w-10 text-accent mx-auto mb-2" />
-                    <p className="text-primary-foreground font-serif font-bold text-lg">NFT Collectibles</p>
-                    <p className="text-primary-foreground/80 text-sm">On-chain proof of impact</p>
+                    <Award className="h-10 w-10 text-accent mx-auto mb-3" />
+                    <p className="text-primary-foreground font-serif font-bold text-xl">NFT Collectibles</p>
+                    <p className="text-primary-foreground/80 text-sm mt-1">On-chain proof of impact</p>
                   </div>
                 </div>
               </div>
-              <CardContent className="p-5">
-                <h3 className="font-semibold text-card-foreground mb-3">Unlock real perks</h3>
-                <ul className="flex flex-col gap-2">
+              <CardContent className="p-6">
+                <h3 className="font-semibold text-card-foreground text-lg mb-4">Unlock real perks</h3>
+                <ul className="flex flex-col gap-3">
                   {rewards.map((reward) => (
-                    <li key={reward} className="flex items-start gap-2 text-sm text-muted-foreground">
+                    <li key={reward} className="flex items-start gap-2.5 text-sm text-muted-foreground">
                       <Check className="h-4 w-4 text-primary mt-0.5 shrink-0" />
                       {reward}
                     </li>
@@ -156,7 +156,7 @@ export function NFTRewards() {
               </CardContent>
             </Card>
 
-            <Button size="lg" className="w-full">
+            <Button size="lg" className="w-full rounded-full h-12 text-base">
               Start Earning Rewards
             </Button>
           </div>
